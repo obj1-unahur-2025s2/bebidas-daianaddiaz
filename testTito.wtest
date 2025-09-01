@@ -1,0 +1,13 @@
+import deportista.*
+import bebidas.*
+
+describe "prueba 1 de tito" {
+    test "tito inicialmente si consumio 0 de cianuro su velocidad es de 0" {
+        tito.consumir(0, cianuro)
+        assert.equals(0, tito.velocidad())
+    }
+    test "tito si toma 200 de whisky su velocidad es 0" {
+        tito.consumir(200, whisky)
+        assert.equals(0.9 ** 200 * tito.inercia() / tito.peso(), tito.velocidad())
+    }
+}
